@@ -57,12 +57,12 @@
   "sideEffects": false,
   "private": true,
   "devDependencies": {
-    "@azure/core-util": "^1.0.0-beta.1",
-    "@azure-tools/test-recorder": "^1.0.0",
-    "@azure-tools/test-recorder-new": "^1.0.0",
-    "@azure/storage-queue": "^12.6.0",
-    "@azure/dev-tool": "^1.0.0",
-    "@azure/eslint-plugin-azure-sdk": "^3.0.0",
+    "@azure/core-util": "workspace:^1.0.0-beta.1",
+    "@azure-tools/test-recorder": "workspace:^1.0.0",
+    "@azure-tools/test-recorder-new": "workspace:^1.0.0",
+    "@azure/storage-queue": "workspace:^12.6.0",
+    "@azure/dev-tool": "workspace:^1.0.0",
+    "@azure/eslint-plugin-azure-sdk": "workspace:^3.0.0",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-multi-entry": "^3.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -107,7 +107,7 @@
     "typescript": "~4.2.0",
     "xhr-mock": "^2.4.1",
     "uuid": "^8.3.0",
-    "@azure/data-tables": "^12.1.2",
+    "@azure/data-tables": "workspace:^12.1.2",
     "@types/uuid": "^8.0.0"
   }
 }

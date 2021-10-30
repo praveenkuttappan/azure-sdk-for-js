@@ -61,7 +61,7 @@
   "homepage": "https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/test-utils/recorder/",
   "sideEffects": false,
   "dependencies": {
-    "@azure/core-http": "^2.0.0",
+    "@azure/core-http": "workspace:^2.0.0",
     "@azure/core-tracing": "1.0.0-preview.13",
     "fs-extra": "^8.1.0",
     "nise": "^4.0.3",
@@ -70,8 +70,8 @@
     "md5": "^2.2.1"
   },
   "devDependencies": {
-    "@azure/dev-tool": "^1.0.0",
-    "@azure/eslint-plugin-azure-sdk": "^3.0.0",
+    "@azure/dev-tool": "workspace:^1.0.0",
+    "@azure/eslint-plugin-azure-sdk": "workspace:^3.0.0",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-multi-entry": "^3.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",

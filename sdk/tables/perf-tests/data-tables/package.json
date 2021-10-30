@@ -8,8 +8,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@azure/data-tables": "^12.1.2",
-    "@azure/test-utils-perf": "^1.0.0",
+    "@azure/data-tables": "workspace:^12.1.2",
+    "@azure/test-utils-perf": "workspace:^1.0.0",
     "dotenv": "^8.2.0",
     "uuid": "^8.3.0"
   },

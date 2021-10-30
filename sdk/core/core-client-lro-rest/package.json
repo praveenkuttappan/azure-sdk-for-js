@@ -57,14 +57,14 @@
   "sideEffects": false,
   "prettier": "@azure/eslint-plugin-azure-sdk/prettier.json",
   "dependencies": {
-    "@azure/core-lro": "^2.2.0",
-    "@azure-rest/core-client": "1.0.0-beta.7",
+    "@azure/core-lro": "workspace:^2.2.0",
+    "@azure-rest/core-client": "workspace:*",
     "tslib": "^2.2.0"
   },
   "devDependencies": {
-    "@azure/core-rest-pipeline": "^1.1.0",
-    "@azure/dev-tool": "^1.0.0",
-    "@azure/eslint-plugin-azure-sdk": "^3.0.0",
+    "@azure/core-rest-pipeline": "workspace:^1.1.0",
+    "@azure/dev-tool": "workspace:^1.0.0",
+    "@azure/eslint-plugin-azure-sdk": "workspace:^3.0.0",
     "@microsoft/api-extractor": "^7.18.11",
     "@types/chai": "^4.1.6",
     "@types/mocha": "^7.0.2",

@@ -50,7 +50,8 @@
      * is "fewer-dependencies", which causes PNPM to avoid installing a newer version if an already installed version
      * can be reused; this is more similar to NPM's algorithm.
      */
-    "resolutionStrategy": "fewer-dependencies"
+    "resolutionStrategy": "fewer-dependencies",
+    "useWorkspaces": true
   },
   /**
    * Older releases of the NodeJS engine may be missing features required by your system.
@@ -329,112 +330,197 @@
     {
       "packageName": "@azure/app-configuration",
       "projectFolder": "sdk/appconfiguration/app-configuration",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity",
+        "@azure/keyvault-secrets"
+      ]
     },
     {
       "packageName": "@azure-rest/agrifood-farming",
       "projectFolder": "sdk/agrifood/agrifood-farming-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure-rest/core-client-paging",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/purview-account",
       "projectFolder": "sdk/purview/purview-account-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure-rest/core-client-paging",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/purview-administration",
       "projectFolder": "sdk/purview/purview-administration-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/purview-catalog",
       "projectFolder": "sdk/purview/purview-catalog-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/purview-scanning",
       "projectFolder": "sdk/purview/purview-scanning-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/ai-document-translator",
       "projectFolder": "sdk/documenttranslator/ai-document-translator-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-rest/confidential-ledger",
       "projectFolder": "sdk/confidentialledger/confidential-ledger-rest",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/ai-anomaly-detector",
       "projectFolder": "sdk/anomalydetector/ai-anomaly-detector",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/ai-form-recognizer",
       "projectFolder": "sdk/formrecognizer/ai-form-recognizer",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/ai-text-analytics",
       "projectFolder": "sdk/textanalytics/ai-text-analytics",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/ai-metrics-advisor",
       "projectFolder": "sdk/metricsadvisor/ai-metrics-advisor",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/search-documents",
       "projectFolder": "sdk/search/search-documents",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/attestation",
       "projectFolder": "sdk/attestation/attestation",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/quantum-jobs",
       "projectFolder": "sdk/quantum/quantum-jobs",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/communication-chat",
       "projectFolder": "sdk/communication/communication-chat",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/communication-identity"
+      ]
     },
     {
       "packageName": "@azure/communication-common",
       "projectFolder": "sdk/communication/communication-common",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/communication-identity",
       "projectFolder": "sdk/communication/communication-identity",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/communication-network-traversal",
       "projectFolder": "sdk/communication/communication-network-traversal",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/communication-identity",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/communication-phone-numbers",
       "projectFolder": "sdk/communication/communication-phone-numbers",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/communication-identity",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/communication-sms",
       "projectFolder": "sdk/communication/communication-sms",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/communication-identity",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/container-registry",
       "projectFolder": "sdk/containerregistry/container-registry",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/core-amqp",
@@ -450,6 +536,7 @@
       "packageName": "@azure-rest/core-client",
       "projectFolder": "sdk/core/core-client-rest",
       "versionPolicyName": "core"
+
     },
     {
       "packageName": "@azure-rest/core-client-paging",
@@ -469,7 +556,10 @@
     {
       "packageName": "@azure/core-client",
       "projectFolder": "sdk/core/core-client",
-      "versionPolicyName": "core"
+      "versionPolicyName": "core",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/core-crypto",
@@ -479,17 +569,26 @@
     {
       "packageName": "@azure/core-http",
       "projectFolder": "sdk/core/core-http",
-      "versionPolicyName": "core"
+      "versionPolicyName": "core",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/core-rest-pipeline",
       "projectFolder": "sdk/core/core-rest-pipeline",
-      "versionPolicyName": "core"
+      "versionPolicyName": "core",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/core-lro",
       "projectFolder": "sdk/core/core-lro",
-      "versionPolicyName": "core"
+      "versionPolicyName": "core",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/core-paging",
@@ -499,7 +598,10 @@
     {
       "packageName": "@azure/core-tracing",
       "projectFolder": "sdk/core/core-tracing",
-      "versionPolicyName": "core"
+      "versionPolicyName": "core",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/core-util",
@@ -514,7 +616,10 @@
     {
       "packageName": "@azure/cosmos",
       "projectFolder": "sdk/cosmosdb/cosmos",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/monitor-opentelemetry-exporter",
@@ -524,7 +629,11 @@
     {
       "packageName": "@azure/monitor-query",
       "projectFolder": "sdk/monitor/monitor-query",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/monitor-opentelemetry-exporter"
+      ]
     },
     {
       "packageName": "@azure/dev-tool",
@@ -534,27 +643,45 @@
     {
       "packageName": "@azure/eventgrid",
       "projectFolder": "sdk/eventgrid/eventgrid",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/core-tracing",
+        "@azure/service-bus"
+      ]
     },
     {
       "packageName": "@azure/event-hubs",
       "projectFolder": "sdk/eventhub/event-hubs",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/eventhubs-checkpointstore-blob",
       "projectFolder": "sdk/eventhub/eventhubs-checkpointstore-blob",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/event-hubs"
+      ]
     },
     {
       "packageName": "@azure/eventhubs-checkpointstore-table",
       "projectFolder": "sdk/eventhub/eventhubs-checkpointstore-table",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/event-hubs"
+      ]
     },
     {
       "packageName": "@azure/event-processor-host",
       "projectFolder": "sdk/eventhub/event-processor-host",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/event-hubs"
+      ]
     },
     {
       "packageName": "@azure/mock-hub",
@@ -564,7 +691,10 @@
     {
       "packageName": "@azure/identity",
       "projectFolder": "sdk/identity/identity",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/identity-vscode",
@@ -579,27 +709,44 @@
     {
       "packageName": "@azure/keyvault-common",
       "projectFolder": "sdk/keyvault/keyvault-common",
-      "versionPolicyName": "utility"
+      "versionPolicyName": "utility",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/keyvault-admin",
       "projectFolder": "sdk/keyvault/keyvault-admin",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/keyvault-keys"
+      ]
     },
     {
       "packageName": "@azure/keyvault-certificates",
       "projectFolder": "sdk/keyvault/keyvault-certificates",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/keyvault-secrets"
+      ]
     },
     {
       "packageName": "@azure/keyvault-keys",
       "projectFolder": "sdk/keyvault/keyvault-keys",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/keyvault-secrets",
       "projectFolder": "sdk/keyvault/keyvault-secrets",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/logger",
@@ -609,17 +756,29 @@
     {
       "packageName": "@azure/schema-registry",
       "projectFolder": "sdk/schemaregistry/schema-registry",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/schema-registry-avro",
       "projectFolder": "sdk/schemaregistry/schema-registry-avro",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/service-bus",
       "projectFolder": "sdk/servicebus/service-bus",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/storage-internal-avro",
@@ -629,57 +788,101 @@
     {
       "packageName": "@azure/storage-blob",
       "projectFolder": "sdk/storage/storage-blob",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/storage-blob-changefeed",
       "projectFolder": "sdk/storage/storage-blob-changefeed",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/storage-file-share",
       "projectFolder": "sdk/storage/storage-file-share",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/storage-file-datalake",
       "projectFolder": "sdk/storage/storage-file-datalake",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/storage-queue",
       "projectFolder": "sdk/storage/storage-queue",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/synapse-access-control",
       "projectFolder": "sdk/synapse/synapse-access-control",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/synapse-artifacts",
       "projectFolder": "sdk/synapse/synapse-artifacts",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/synapse-managed-private-endpoints",
       "projectFolder": "sdk/synapse/synapse-managed-private-endpoints",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/synapse-monitoring",
       "projectFolder": "sdk/synapse/synapse-monitoring",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/synapse-spark",
       "projectFolder": "sdk/synapse/synapse-spark",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/data-tables",
       "projectFolder": "sdk/tables/data-tables",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-data-tables",
@@ -689,7 +892,11 @@
     {
       "packageName": "@azure/template",
       "projectFolder": "sdk/template/template",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tools/testing-recorder-new",
@@ -704,7 +911,10 @@
     {
       "packageName": "@azure-tools/test-recorder",
       "projectFolder": "sdk/test-utils/recorder",
-      "versionPolicyName": "utility"
+      "versionPolicyName": "utility",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure-tools/test-recorder-new",
@@ -719,27 +929,44 @@
     {
       "packageName": "@azure/test-utils",
       "projectFolder": "sdk/test-utils/test-utils",
-      "versionPolicyName": "utility"
+      "versionPolicyName": "utility",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/digital-twins-core",
       "projectFolder": "sdk/digitaltwins/digital-twins-core",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/video-analyzer-edge",
       "projectFolder": "sdk/videoanalyzer/video-analyzer-edge",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/iot-modelsrepository",
       "projectFolder": "sdk/iot/iot-modelsrepository",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-ai-form-recognizer",
       "projectFolder": "sdk/formrecognizer/perf-tests/ai-form-recognizer",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/ai-form-recognizer",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-eventgrid",
@@ -749,7 +976,11 @@
     {
       "packageName": "@azure-tests/perf-ai-text-analytics",
       "projectFolder": "sdk/textanalytics/perf-tests/text-analytics",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/ai-text-analytics",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-storage-blob",
@@ -769,17 +1000,29 @@
     {
       "packageName": "@azure-tests/perf-keyvault-keys",
       "projectFolder": "sdk/keyvault/perf-tests/keyvault-keys",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/keyvault-keys"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-keyvault-certificates",
       "projectFolder": "sdk/keyvault/perf-tests/keyvault-certificates",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/keyvault-certificates"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-keyvault-secrets",
       "projectFolder": "sdk/keyvault/perf-tests/keyvault-secrets",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/keyvault-secrets"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-identity",
@@ -789,47 +1032,79 @@
     {
       "packageName": "@azure-tests/perf-service-bus",
       "projectFolder": "sdk/servicebus/perf-tests/service-bus",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/service-bus",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-event-hubs",
       "projectFolder": "sdk/eventhub/perf-tests/event-hubs",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/event-hubs",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/mixed-reality-authentication",
       "projectFolder": "sdk/mixedreality/mixed-reality-authentication",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/iot-device-update",
       "projectFolder": "sdk/deviceupdate/iot-device-update",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/web-pubsub",
       "projectFolder": "sdk/web-pubsub/web-pubsub",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure/web-pubsub-express",
       "projectFolder": "sdk/web-pubsub/web-pubsub-express",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-search-documents",
       "projectFolder": "sdk/search/perf-tests/search-documents",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-ai-metrics-advisor",
       "projectFolder": "sdk/metricsadvisor/perf-tests/ai-metrics-advisor",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/ai-metrics-advisor",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-container-registry",
       "projectFolder": "sdk/containerregistry/perf-tests/container-registry",
-      "versionPolicyName": "test"
+      "versionPolicyName": "test",
+      "cyclicDependencyProjects": [
+        "@azure/container-registry",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure-tests/perf-core-rest-pipeline",
@@ -849,7 +1124,11 @@
     {
       "packageName": "@azure/mixed-reality-remote-rendering",
       "projectFolder": "sdk/remoterendering/mixed-reality-remote-rendering",
-      "versionPolicyName": "client"
+      "versionPolicyName": "client",
+      "cyclicDependencyProjects": [
+        "@azure/core-tracing",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-network",
@@ -859,7 +1138,11 @@
     {
       "packageName": "@azure/arm-compute",
       "projectFolder": "sdk/compute/arm-compute",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity",
+        "@azure/arm-network"
+      ]
     },
     {
       "packageName": "@azure/arm-storage",
@@ -879,7 +1162,10 @@
     {
       "packageName": "@azure/arm-policy",
       "projectFolder": "sdk/policy/arm-policy",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-locks",
@@ -934,7 +1220,12 @@
     {
       "packageName": "@azure/arm-eventhub",
       "projectFolder": "sdk/eventhub/arm-eventhub",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/arm-network",
+        "@azure/arm-storage",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-purview",
@@ -949,77 +1240,123 @@
     {
       "packageName": "@azure/arm-apimanagement",
       "projectFolder": "sdk/apimanagement/arm-apimanagement",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-rediscache",
       "projectFolder": "sdk/redis/arm-rediscache",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/arm-network",
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-eventgrid",
       "projectFolder": "sdk/eventgrid/arm-eventgrid",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-quota",
       "projectFolder": "sdk/quota/arm-quota",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-extendedlocation",
       "projectFolder": "sdk/extendedlocation/arm-extendedlocation",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-security",
       "projectFolder": "sdk/security/arm-security",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-operationalinsights",
       "projectFolder": "sdk/operationalinsights/arm-operationalinsights",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-postgresql",
       "projectFolder": "sdk/postgresql/arm-postgresql",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-containerregistry",
       "projectFolder": "sdk/containerregistry/arm-containerregistry",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-logic",
       "projectFolder": "sdk/logic/arm-logic",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-recoveryservices",
       "projectFolder": "sdk/recoveryservices/arm-recoveryservices",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-appplatform",
       "projectFolder": "sdk/appplatform/arm-appplatform",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-containerservice",
       "projectFolder": "sdk/containerservice/arm-containerservice",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-operations",
       "projectFolder": "sdk/operationsmanagement/arm-operations",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     },
     {
       "packageName": "@azure/arm-mediaservices",
       "projectFolder": "sdk/mediaservices/arm-mediaservices",
-      "versionPolicyName": "management"
+      "versionPolicyName": "management",
+      "cyclicDependencyProjects": [
+        "@azure/identity"
+      ]
     }
   ]
 }
